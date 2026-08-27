@@ -1,0 +1,60 @@
+name: 优化或重构
+description: 改善性能、代码质量或可维护性，原则上不改变业务功能
+title: "[优化] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请说明当前问题及改进收益，避免只有“代码需要优化”这类笼统描述。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 当前问题
+      description: 现有实现有什么不足？请尽量提供数据或具体示例。
+      placeholder: 描述性能瓶颈、重复代码、复杂度、技术债等问题。
+    validations:
+      required: true
+
+  - type: textarea
+    id: direction
+    attributes:
+      label: 改进方向
+      description: 计划如何改进？预期获得什么收益？
+      placeholder: 描述改进思路和预期结果。
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: 影响范围
+      description: 哪些模块、接口、数据或用户可能受到影响？
+      placeholder: 列出涉及的模块及需要回归验证的功能。
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: 风险
+      description: 是否存在兼容性、数据迁移、性能回退或其他风险？
+      placeholder: 描述风险和应对措施；没有明显风险可填写“暂无”。
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: 完成标准
+      description: 如何确认本次优化或重构有效且没有造成回归？
+      placeholder: |
+        - [ ] 原有功能通过回归测试
+        - [ ] 关键指标达到……
+        - [ ] 相关文档已更新
+
+  - type: input
+    id: related
+    attributes:
+      label: 关联 Issue
+      placeholder: "#123（可选）"

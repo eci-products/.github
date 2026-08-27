@@ -1,0 +1,56 @@
+name: 开发任务
+description: 记录已经明确、可直接执行的开发工作
+title: "[任务] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        此模板适合从需求中拆分出的开发工作，以及独立的工程任务。
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: 实现内容
+      description: 需要完成哪些具体工作？
+      placeholder: |
+        - 实现……
+        - 修改……
+        - 补充……
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 技术方案
+      description: 计划如何实现？请说明关键设计、接口或数据变更。
+      placeholder: 描述主要实现思路；简单任务可填写“无需特殊方案”。
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: 完成标准
+      description: 满足哪些可验证的条件，才能关闭此任务？
+      placeholder: |
+        - [ ] 功能实现并通过自测
+        - [ ] 已补充或更新测试
+        - [ ] 已更新相关文档
+    validations:
+      required: true
+
+  - type: input
+    id: related
+    attributes:
+      label: 关联 Issue
+      description: 填写相关需求、Bug、依赖任务或父 Issue。
+      placeholder: "#123；没有则填写“无”"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 补充信息
+      description: 可补充参考资料、注意事项或其他上下文。

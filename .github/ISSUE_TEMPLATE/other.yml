@@ -1,0 +1,44 @@
+name: 其他问题
+description: 提交无法归入现有分类的讨论、调研或临时事项
+title: "[其他] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请确认该事项不适合使用 Bug、功能需求、开发任务或优化/重构模板。
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: 事项类型
+      options:
+        - 讨论
+        - 调研
+        - 临时事项
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 事项说明
+      description: 请说明事情的背景、目的和具体内容。
+      placeholder: 描述需要讨论、调研或处理的事项。
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: 期望结果
+      description: 此事项最终需要产出什么，或需要作出什么决定？
+      placeholder: 描述期望的结论、文档、行动项或其他产出。
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 补充信息
+      description: 可补充相关链接、附件、参与人或截止时间。
